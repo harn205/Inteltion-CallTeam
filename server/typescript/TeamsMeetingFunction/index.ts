@@ -3,12 +3,13 @@ import createNewMeetingAsync from '../Shared/graph';
 
 let teamsMeetingLink;
 let userId
-const userEmail = 'harn@inteltion.com' // define agent's email here
+// const userEmail = 'natkamol@inteltion.com' // define agent's email here
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest){
     context.log("Request received");
 
     // const userId = process.env.USER_ID;
-   
+    const userEmail = req.query.userEmail as string;
+    console.log("email:  ", userEmail)
    
     
     teamsMeetingLink = await createNewMeetingAsync(userEmail);
