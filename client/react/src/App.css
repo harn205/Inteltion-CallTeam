@@ -9,17 +9,6 @@
 }
 
 
-.message::before {
-    content: ""; /* Create an empty pseudo-element */
-    position: absolute; /* Set position to absolute */
-    top: 0; /* Position from the top */
-    right: 0; /* Position from the left */
-    width: 66px; /* Set the width of the image to 100% of the container */
-    height: 100px; /* Set the height of the image to 100% of the container */
-    background-image: url('/public/icon-inteltion.svg'); /* Set the path to your image */
-    background-size: cover; /* Scale the image to cover the container */
-    background-position: center; /* Center the image within the container */
-}
 
 .header {
     background: linear-gradient(to right, #ec2323, #ffa07a);
@@ -29,35 +18,30 @@
     /* Add other styles as needed */
 }
 
-.header::before {
-    content: ""; /* Create an empty pseudo-element */
-    position: absolute; /* Set position to absolute */
-    top: 0; /* Position from the top */
-    right: 0; /* Position from the left */
-    width: 66px; /* Set the width of the image to 100% of the container */
-    height: 100px; /* Set the height of the image to 100% of the container */
-    background-image: url('/public/icon-inteltion.svg'); /* Set the path to your image */
-    background-size: cover; /* Scale the image to cover the container */
-    background-position: center; /* Center the image within the container */
-}
 
-main{
+.main{
     margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5%; /* Add padding for spacing */
   }
-main::before {
-    content: ""; /* Create an empty pseudo-element */
-    position: absolute; /* Set position to absolute */
-    top: 200px; /* Position from the top */
-  
-    left: 600px; /* Set the left position to 80 pixels */
-    width: 66px; /* Set the width of the image to 100% of the container */
-    height: 100px; /* Set the height of the image to 100% of the container */
-    background-image: url('/public/icon-inteltion.svg'); /* Set the path to your image */
-    background-size: cover; /* Scale the image to cover the container */
-    background-position: center; /* Center the image within the container */
-}
+
   
   #homePage {
+    text-align: center;
+    background-color: rgba(68, 68, 85, 0.707);
+    border-radius: 10%px;
+    width: 35%;
+    margin:auto;
+    box-shadow: 0 0 10px rgba(132, 132, 164, 0.707);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+  }
+
+  #homePage-after {
     text-align: center;
     background-color: rgba(68, 68, 85, 0.707);
     border-radius: 10px;
@@ -72,7 +56,7 @@ main::before {
   
   h1.login-header {
     color: white;
-    font-size: 60px; /* Increased size for prominence */
+    font-size: 400%; /* Increased size for prominence */
     font-weight: bold; /* Made it bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added a subtle shadow */
     text-transform: uppercase; /* Made the text uppercase for presence */
@@ -82,6 +66,31 @@ main::before {
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 10%;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1.login-header {
+      font-size: 200%; /* Adjust font size for smaller screens */
+      letter-spacing: 1px; /* Reduce letter spacing for readability */
+      margin-bottom: 5%; /* Reduce margin for smaller screens */
+    }
+    label.username-header {
+      font-size: 16px; /* Reduce font size for better mobile readability */
+      margin-bottom: 5px; /* Further reduce margin for better spacing on small screens */
+    }
+  
+    input.input-box {
+      width: 100%; /* Make the input box full-width on small screens */
+    }
+    label.username-header {
+      font-size: 16px; /* Reduce font size for better mobile readability */
+      margin-bottom: 5px; /* Further reduce margin for better spacing on small screens */
+    }
+    button {
+      font-size: 14px; /* Further reduce font size for mobile */
+      padding: 8px 16px;
+      margin: 5px 0; /* Further adjust margins for better spacing on small screens */
+    }
   }
   
   label.username-header {
@@ -95,13 +104,25 @@ main::before {
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
+
+  label.email {
+    font-size: 20px;
+    color: #f4f2ef;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
   
   input.input-box {
-    width: 70%;
+    width: 65%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     color: #333;
     margin-left: 2%;
@@ -122,4 +143,22 @@ main::before {
   
   button:hover {
     background-color: #33BBC5;
+  }
+
+  .logo{
+    height: 5%;
+    /* padding-left: 0; */
+    padding-top: 2px;
+    max-width: 10%;
+    object-position: left top;
+  }
+  .logo-container {
+    display: flex;
+    padding-bottom: 100px;
+  }
+  .username-header{
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center;
+
   }
